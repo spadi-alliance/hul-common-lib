@@ -16,5 +16,3 @@ cd build
 make
 make install
 ```
-
-Do not build and install under the source directory.
