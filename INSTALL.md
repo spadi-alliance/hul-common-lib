@@ -2,8 +2,8 @@
 ### Build example
 
 ```
-mkdir hul_common_lib
-cd  hul_common_lib
+mkdir hul-common-lib
+cd  hul-common-lib
 mkdir build install
 
 git clone https://github.com/spadi-alliance/hul-common-lib.git hul-common-lib.src.git 
