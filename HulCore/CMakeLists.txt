@@ -6,6 +6,7 @@ set(MY_PUB_HEADER
   "FPGAModule.hh"
   "Utility.hh"
   "BitDump.hh"
+  "DaqFuncs.hh"  
   )
 
 file(GLOB_RECURSE SRCS "*.cc")
