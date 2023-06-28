@@ -13,3 +13,76 @@ Forking-workflow is dopted. Please fork the official repository in spadi-allianc
 **Do not push your contribution to the official directly.**
 
 ## [INSTALLATION](INSTALL.md) for Users
+
+## List of avairable executables for each FEEs
+
+These two executables can read and write the values specified address.
+- read_register
+- write_register
+
+### AMANEQ
+
+- SiTCP
+  - erase_eeprom
+  - set_ctrl_eeprom
+  - set_sitcpreg
+- SPI flash memory
+  - flash_memory_programmer
+  - mcs_converter
+  - verify_mcs
+- Jitter cleaner
+  - set_cdce62002
+- FW internal functions
+  - gen_user_reset
+  - get_version
+  - inject_sem_error
+  - read_sem
+  - read_xadc
+  - reconfig_fpga
+  - reset_sem
+
+### CIRASAME
+
+- SiTCP
+  - erase_eeprom
+  - set_ctrl_eeprom
+  - set_sitcpreg
+- SPI flash memory
+  - flash_memory_programmer
+  - mcs_converter
+  - verify_mcs
+- Jitter cleaner
+  - set_cdce62002
+- APD bias
+  - set_max1932
+- FW internal functions
+  - gen_user_reset
+  - get_version
+  - inject_sem_error
+  - read_sem
+  - read_xadc
+  - reconfig_fpga
+  - reset_sem
+ 
+### RAYRAW
+
+- SiTCP
+  - erase_eeprom
+  - set_ctrl_eeprom
+  - set_sitcpreg
+- SPI flash memory
+  - flash_memory_programmer
+  - mcs_converter
+  - verify_mcs
+- Jitter cleaner
+  - set_cdce62002
+- APD bias
+  - set_max1932
+- FW internal functions
+  - gen_user_reset
+  - get_version
+  - inject_sem_error
+  - read_sem
+  - read_xadc
+  - reconfig_fpga
+  - reset_sem
