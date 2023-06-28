@@ -5,39 +5,18 @@
 
 namespace LBUS{
 // BIAS -------------------------------------------------------------------
-// Module ID: 0x7
+// Module ID: 0x9
 namespace BIAS{
   enum LocalAddress
     {
-     kAddrTxd       = 0x70000000, // W,  [7:0] SPI TX data
-     kAddrRxd       = 0x70100000, // R,  [7:0] SPI RX data
-     kAddrExecWrite = 0x71000000, // W,
-     kAddrExecRead  = 0x72000000  // R,
+     kAddrTxd       = 0x90000000, // W,  [7:0] SPI TX data
+     kAddrRxd       = 0x90100000, // R,  [7:0] SPI RX data
+     kAddrExecWrite = 0x91000000, // W,
+     kAddrExecRead  = 0x92000000  // R,
      
     };
 };
 
-// AD9220 -----------------------------------------------------------------
-// Module ID: 0x8
-namespace AD9220{
-  enum LocalAddress
-    {
-     kAddrDaqGate     = 0x80000000, // W/R, [0:0] ADC DAQ gate
-     kAddrEventFull   = 0x80100000, // R,   [0:0] ADC event fifo is full
-     kAddrReadFIFO    = 0x81000000, // R,   FIFO read sequence
-     kAddrReleaseBusy = 0x82000000  // W,   Release busy (event full)
-    };
-};
-
-// HGD --------------------------------------------------------------------
-// Module ID: 0x9
-namespace HGD{
-  enum LocalAddress
-    {
-     kAddrMask      = 0x90000000  // W/R, [31:0] Delay line mask
-    };
-};
-  
 // MIG --------------------------------------------------------------------
 // Module ID: 0xA
 namespace MIG{
