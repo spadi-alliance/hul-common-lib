@@ -4,6 +4,7 @@
 #include<cstdio>
 #include<csignal>
 #include<list>
+#include<unistd.h>
 
 #include<arpa/inet.h>
 #include<sys/types.h>
