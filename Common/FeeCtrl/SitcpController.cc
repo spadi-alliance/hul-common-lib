@@ -8,6 +8,7 @@
 #include<cstdio>
 #include<csignal>
 #include<string>
+#include<unistd.h>
 
 namespace RBCP{
 
