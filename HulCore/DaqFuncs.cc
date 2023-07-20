@@ -20,14 +20,6 @@ namespace HUL::DAQ{
 
   int user_stop = 0;
 
-  static const int32_t kNumData   {10000};
-  static const int32_t kNumByte   {8};
-
-  struct DataCont{
-    uint8_t data[kNumData*kNumByte];
-    uint32_t recv_bytes;
-  };
-
   // signal -----------------------------------------------------------------
   void
   UserStop_FromCtrlC(int signal)
@@ -36,11 +28,30 @@ namespace HUL::DAQ{
     user_stop = 1;
   }
 
+  // Function for trigger-type DAQ ------------------------------------------
+  void
+  DoTrgDaq(std::string ip, int32_t runno, int32_t event_num)
+  {
+    static const int32_t kNumHead      {3};
+    static const int32_t kNumBodyMax   {8192};
+    static const int32_t kNumData      {kNumHead + kNumBodyMax};
+    static const int32_t kNumByte      {4};
+  }
 
-  // execute daq ------------------------------------------------------------
+  
+
+  // Function for streaming DAQ ---------------------------------------------
   void
   DoStrDaq(std::string ip, int32_t runno)
   {
+    static const int32_t kNumData   {10000};
+    static const int32_t kNumByte   {8};
+
+    struct DataCont{
+      uint8_t data[kNumData*kNumByte];
+      uint32_t recv_bytes;
+    };
+    
     (void) signal(SIGINT, UserStop_FromCtrlC);
 
     // TCP socket
