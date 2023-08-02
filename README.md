@@ -6,7 +6,7 @@ AMANEQ, CIRASAME, and RAYRAW software require this library.
 Requires C++17.
 | System | Version | Compiler                 | CMake                          |
 | ---    | ---     | ---                      | ---                            | 
-| AlmaLinux | 9       | GCC 11.3.1 (Require > 7.1) | 3.20.2 (Require > 3.8) |
+| AlmaLinux | 9       | GCC 11.3.1 (Require > 7.1) | 3.20.2 (Require > 3.13) |
 
 ## For developer
 Forking-workflow is dopted. Please fork the official repository in spadi-alliance to your accout and make a pull-request to merge your work.
