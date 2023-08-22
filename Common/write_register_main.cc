@@ -2,6 +2,7 @@
 #include <cstdio>
 #include <ios>
 #include <iomanip>
+#include <sstream>
 
 #include "RegisterMapCommon.hh"
 #include "UDPRBCP.hh"
