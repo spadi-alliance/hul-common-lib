@@ -41,8 +41,8 @@ foreach(val IN ITEMS
     ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR};
     )
   target_link_libraries(${MY_TARGET} PUBLIC
-    HulCore;
     FeeCtrl;
+    HulCore;
     )
 
   install(TARGETS ${MY_TARGET}
