@@ -211,7 +211,7 @@ namespace HUL::DAQ{
     int recv_status = Receive(sock, (uint8_t*)buffer, kSizeHeader, received_bytes);
     if(recv_status <= 0) return recv_status;
 
-    uint32_t n_word_data  = buffer[1] & 0xffff;
+    uint32_t n_word_data  = buffer[1] & 0x3ffff;
     uint32_t size_data    = n_word_data*TRG::kNumByte;
   
     if(n_word_data == 0) return TRG::kNumHead;
