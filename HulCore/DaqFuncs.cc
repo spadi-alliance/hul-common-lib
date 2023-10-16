@@ -34,7 +34,7 @@ namespace HUL::DAQ{
   // Function for trigger-type DAQ ------------------------------------------
   namespace TRG{
     static const int32_t kNumHead      {3};
-    static const int32_t kNumBodyMax   {8192};
+    static const int32_t kNumBodyMax   {8192+65536}; // to read ADC data (32 ch * 2048 max windowsize)
     static const int32_t kNumData      {kNumHead + kNumBodyMax};
     static const int32_t kNumByte      {4};
   };
