@@ -4,6 +4,18 @@
 #include<stdint.h>
 
 namespace LBUS{
+// Scaler ------------------------------------------------------------------
+// Module ID: 0x8
+namespace SCR{
+  enum LocalAddress
+    {
+     kAddrScrReset  = 0x80000000, // W,  [0:0] Assert counter soft reset
+     kAddrLatchCnt  = 0x80100000, // R,  [0:0] Read busy status, if busy is low, assert latch signal for counters
+     kAddrReadFIFO  = 0x80200000 // R,  FIFO read sequence
+     
+    };
+};
+  
 // BIAS -------------------------------------------------------------------
 // Module ID: 0x9
 namespace BIAS{
