@@ -6,6 +6,7 @@ foreach(val IN ITEMS
     inject_sem_error;
     mcs_converter;
     read_register;
+    read_scr;
     read_sem;
     read_xadc;
     reconfig_fpga;
