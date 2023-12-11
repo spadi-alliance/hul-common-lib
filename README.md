@@ -40,6 +40,7 @@ These two executables can read and write the values specified address.
   - read_xadc
   - reconfig_fpga
   - reset_sem
+  - read_scr
 
 ### CIRASAME
 
@@ -63,6 +64,7 @@ These two executables can read and write the values specified address.
   - read_xadc
   - reconfig_fpga
   - reset_sem
+  - read_scr
  
 ### RAYRAW
 
@@ -86,3 +88,4 @@ These two executables can read and write the values specified address.
   - read_xadc
   - reconfig_fpga
   - reset_sem
+  - read_scr
