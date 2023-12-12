@@ -11,7 +11,8 @@ namespace SCR{
     {
      kAddrScrReset  = 0x80000000, // W,  [0:0] Assert counter soft reset
      kAddrLatchCnt  = 0x80100000, // R,  [0:0] Read busy status, if busy is low, assert latch signal for counters
-     kAddrReadFIFO  = 0x80200000 // R,  FIFO read sequence
+     kAddrNumCh     = 0x80200000, // R,  [7:0] Read number of scaler channel
+     kAddrReadFIFO  = 0x81000000 // R,  FIFO read sequence
      
     };
 };
