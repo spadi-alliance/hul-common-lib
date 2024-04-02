@@ -179,6 +179,20 @@ namespace HUL::DAQ{
       if(user_stop == 1) break;
     }// For()
 
+    close(sock);    
+    
+    std::list<DataCont>::iterator itr     = data_list.begin();
+    std::list<DataCont>::iterator itr_end = data_list.end();
+    for(; itr != itr_end; ++itr){
+      //    std::cout << "N:" << (*itr).n_word << std::endl;
+      ofs.write((char*)(*itr).data, (*itr).recv_bytes);
+    }
+
+    ofs.close();
+
+    std::cout << "#D: End of DAQ." << std::endl;
+    
+#if 0
     std::list<DataCont>::iterator itr     = data_list.begin();
     std::list<DataCont>::iterator itr_end = data_list.end();
     for(; itr != itr_end; ++itr){
@@ -196,6 +210,7 @@ namespace HUL::DAQ{
 
     close(sock);
     ofs.close();
+#endif
   
     return;
   }
