@@ -15,6 +15,7 @@ foreach(val IN ITEMS
     set_ctrl_eeprom;
     set_max1932;
     set_sitcpreg;
+    strdaq;
     verify_mcs;
     write_register
     )
