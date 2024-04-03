@@ -21,6 +21,5 @@ int main(int argc, char* argv[])
   RBCP::UDPRBCP udp_rbcp(board_ip, RBCP::gUdpPort, RBCP::DebugMode::kNoDisp);
   HUL::FPGAModule fpga_module(udp_rbcp);
   fpga_module.WriteModule(LBUS::BCT::kAddrReset, 0);
-
   return 0;
 }
