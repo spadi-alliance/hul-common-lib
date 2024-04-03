@@ -6,6 +6,8 @@
 #include "RegisterMapCommon.hh"
 #include "FPGAModule.hh"
 #include "UDPRBCP.hh"
+#include "FWMagicMap.hh"
+#include "Utility.hh"
 
 using namespace HUL;
 int main(int argc, char* argv[])
@@ -33,6 +35,14 @@ int main(int argc, char* argv[])
   std::cout << "FW version : " << major_version << "."
 	    << minor_version
 	    << std::endl;
+
+  uint32_t fw_magic = ((bct_version >> 16) & 0xffff);
+  const auto itr = HUL::g_fw_map.find(fw_magic);
+  if(itr == HUL::g_fw_map.end()){
+    Utility::PrintError("", "Unknown firmware");
+  }else{
+    Utility::PrintNormal("", itr->second);
+  }
 
   return 0;
 

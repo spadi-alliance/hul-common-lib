@@ -4,6 +4,32 @@
 #include<stdint.h>
 
 namespace LBUS{
+// MikumariUtil ------------------------------------------------------------
+// Module ID: 0x0 (if not, please give an offset in main function)
+namespace MUTIL{
+  enum LocalAddress
+    {
+     kAddrCbtLaneUp       = 0x00000000, // R,   [31:0] CBT lann-up status
+     kAddrCbtTapValueIn   = 0x00100000, // R,   [4:0] Tap value selected by CBT init process
+     kAddrCbtTapValueOut  = 0x00200000, // W,   [4:0] Tap value for fixed idelay value mode
+     kAddrCbtBitSlipIn    = 0x00300000, // R,   [3:0] Bitslip number by CBT init process
+     kAddrCbtInit         = 0x00400000, // W,   [31:0] CBT init request
+			  		        
+     kAddrMikumariUp      = 0x00500000, // R,   [31:0] Mikumari link-up status
+     			  
+     kAddrLaccpUp         = 0x00600000, // R,   [31:0] LACCP link-up status
+     kAddrPartnerIpAddr   = 0x00700000, // R,   [31:0] IP address in other side
+     kAddrHbcOffset       = 0x00800000, // R,   [15:0] Hbc offset
+     kAddrLocalFineOffset = 0x00900000, // R,   [15:0] Local fine offset
+     kAddrLaccpFineOffset = 0x00A00000, // R,   [15:0] LACCP fine offset
+     kAddrHbfState        = 0x00B00000, // W/R, [0:0] Hb frame state
+
+     kAddrRegIndex        = 0x01000000, // W/R, [5:0] W/R channel number
+     kAddrNumLinks        = 0x02000000, // R,   [5:0] Number of Mikumari Links
+     
+    };
+};
+  
 // Scaler ------------------------------------------------------------------
 // Module ID: 0x8
 namespace SCR{

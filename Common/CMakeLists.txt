@@ -11,10 +11,14 @@ foreach(val IN ITEMS
     read_xadc;
     reconfig_fpga;
     reset_sem;
+    send_cbtinit;
     set_cdce62002;
     set_ctrl_eeprom;
+    set_hbfstate;
     set_max1932;
     set_sitcpreg;
+    show_laccp;
+    show_mikumari;
     strdaq;
     verify_mcs;
     write_register
