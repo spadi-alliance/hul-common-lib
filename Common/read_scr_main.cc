@@ -10,23 +10,24 @@
 #include "UDPRBCP.hh"
 
 // Main ___________________________________________________________________________
-enum argIndex{kBin, kIp, kFilePath};
+enum argIndex{kBin, kIp, kFilePath, kApp};
 using namespace HUL;
 using namespace LBUS;
 int main(int argc, char* argv[])
 {
   if(1 == argc){
     std::cout << "Usage\n";
-    std::cout << "read_scr [IP address] [Output file path]" << std::endl;
+    std::cout << "read_scr [IP address] [Output file path] [append (option)]" << std::endl;
     return 0;
   }// usage
   
   // body ------------------------------------------------------
   const std::string kBoardIp  = argv[kIp];
   const std::string kOutPath  = argv[kFilePath];
+  std::ios_base::openmode ios_flag = std::ios::binary;
+  if(argc == kApp+1) ios_flag = ios_flag | std::ios::app;
 
-
-  std::ofstream ofs(kOutPath.c_str(), std::ios::binary);
+  std::ofstream ofs(kOutPath.c_str(), ios_flag);
   if(!ofs.is_open()){
     std::cerr << "#E: File cannot be not created (" << kFilePath << ")." << std::endl;
     return 0;
