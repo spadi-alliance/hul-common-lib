@@ -11,6 +11,7 @@ foreach(val IN ITEMS
     read_xadc;
     reconfig_fpga;
     reset_sem;
+    reset_sitcp;
     send_cbtinit;
     set_cdce62002;
     set_ctrl_eeprom;
