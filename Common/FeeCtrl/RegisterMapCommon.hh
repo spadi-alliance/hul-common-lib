@@ -38,8 +38,21 @@ namespace SCR{
      kAddrScrReset  = 0x80000000, // W,  [0:0] Assert counter soft reset
      kAddrLatchCnt  = 0x80100000, // R,  [0:0] Read busy status, if busy is low, assert latch signal for counters
      kAddrNumCh     = 0x80200000, // R,  [7:0] Read number of scaler channel
+     kAddrStatus    = 0x80300000, // R,  [7:0] Status register
      kAddrReadFIFO  = 0x81000000 // R,  FIFO read sequence
      
+    };
+
+  enum IndexReset
+    {
+      kIndexLocalReset  = 0x1,
+      kIndexGlobalReset = 0x2,
+      kIndexFifoReset   = 0x4
+    };
+
+  enum IndexStatus
+    {
+      kIndexFifoEmpty   = 0x1
     };
 };
   
