@@ -42,6 +42,14 @@ int main(int argc, char* argv[])
   std::cout << "#D: # of scaler channel: " << kNumReadCh << std::endl;
   std::cout << "#D: Read length is " << kReadLength << " bytes" << std::endl;
 
+  if(0 == (fpga_module.ReadModule(SCR::kAddrStatus) & SCR::kIndexFifoEmpty)){
+    // Previous data remains in FOFO
+    // Probably, RBCP time out happended during FIFO readout
+    std::cout << "#W: FIFO is not empty. RBCP time out?" << std::endl;
+    fpga_module.WriteModule(SCR::kAddrScrReset, SCR::kIndexFifoReset, 1);
+    fpga_module.WriteModule(SCR::kAddrScrReset, 0, 1);
+  }
+  
   while(0 == fpga_module.ReadModule(SCR::kAddrLatchCnt)){};
 
   uint8_t fifo_data[kReadLength];
