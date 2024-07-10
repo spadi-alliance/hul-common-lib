@@ -5,7 +5,6 @@
 #include<string>
 #include<bitset>
 #include<stdint.h>
-#include"Uncopyable.hh"
 
 namespace SPI{
   class Command;
@@ -15,13 +14,15 @@ namespace HUL{
 class FPGAModule;
 
 class FlashMemoryProgrammer
-  : Uncopyable<FlashMemoryProgrammer>
 {
  public:
   using BinaryData = std::vector<uint8_t>;
 
+  FlashMemoryProgrammer() = delete;
+  FlashMemoryProgrammer(const FlashMemoryProgrammer&) = delete;
   FlashMemoryProgrammer(FPGAModule& fModule);
   virtual ~FlashMemoryProgrammer();
+  FlashMemoryProgrammer& operator=(const FlashMemoryProgrammer&) = delete;
 
   //-------------------------------------------------------
   // Read device ID from flash memory.
