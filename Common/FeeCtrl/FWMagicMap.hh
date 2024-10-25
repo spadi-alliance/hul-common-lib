@@ -9,7 +9,7 @@ namespace HUL{
   using FwMagicMap = std::map<const uint32_t, const std::string>;
   const FwMagicMap g_fw_map =
     {
-      {0xF000, "MikumariClock-Primary"},
+      {0xF000, "MikumariClock-Root"},
       {0xF100, "MikumariClock-Hub"},
       {0x60C4, "AMANEQ StrLrTdc"},
       {0xC480, "AMANEQ StrHrTdc Base"},
