@@ -21,6 +21,13 @@ message(STATUS "")
 set(CMAKE_INSTALL_RPATH_USE_LINK_PATH ON)
 set(CMAKE_INSTALL_RPATH "$ORIGIN/../${CMAKE_INSTALL_LIBDIR}")
 
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DDEBUG")
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+  message(STATUS "[Debug mode is specified]")
+  message(STATUS "CMAKE_CXX_FLAGS_DEBUG:    "${CMAKE_CXX_FLAGS_DEBUG})
+  message(STATUS "")
+endif()
+
 if(APPLE)
   message(STATUS "[BUILD on APPLE]")
 elseif(UNIX)
