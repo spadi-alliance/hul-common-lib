@@ -17,7 +17,8 @@ namespace HUL{
       {0x390A, "MikumariPrim-Ex"},
       {0x390B, "MikumariSecond-Ex"},
       {0x413E, "CIRASAME Skeleton"},
-      {0x6041, "CIRASAME StrTdc"}
+      {0x6041, "CIRASAME StrTdc"},
+      {0x7041, "CIRASAME StrTdc-10G"}
     };
 
     const FwMagicMap g_mzn_fw_map =
