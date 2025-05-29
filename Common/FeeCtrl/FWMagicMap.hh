@@ -12,6 +12,7 @@ namespace HUL{
       {0xF000, "MikumariClock-Root"},
       {0xF100, "MikumariClock-Hub"},
       {0x60C4, "AMANEQ StrLrTdc"},
+      {0x61C4, "AMANEQ StrLrTdc-10G"},
       {0xC480, "AMANEQ StrHrTdc Base"},
       {0xA000, "AMANEQ Skeleton"},
       {0x390A, "MikumariPrim-Ex"},
